@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arquitetura e Organização de Computadores?</title>
+</head>
+<body>
+
+<h1>Qual o Significado de Arquitetura e Organização de Computadores?</h1>
+<img src="AOC.PNG" alt="imagem" width="800" height="400">
+<br>
+<p5>A Arquitetura de computadores refere-se aos atributos de um sistema que são visíveis para o programador, ou seja, que têm impacto direto sobre a execução lógica de um programa. A arquitetura do computador lida com o design de computadores, dispositivos de armazenamento de dados e componentes de rede que armazenam e executam programas, transmitem dados e conduzem as interações entre computadores, redes e usuários. Em termos gerais, a arquitetura de um sistema de computador pode ser considerada como um catálogo de ferramentas ou atributos que são visíveis para o usuário, como conjuntos de instruções, número de bits usados ​​para dados, técnicas de endereçamento, etc.</p5>
+<br>
+<p5>Visto que Organização define a maneira como o sistema é estruturado, de modo que todas as ferramentas catalogadas possam ser usadas adequadamente, refere-se às unidades operacionais e suas interconexões que implementam as especificações da sua arquitetura. Ou seja, a organização é projetada para implementar uma especificação particular de arquitetura. Considerando que, Organização de um sistema de computador define a forma como o sistema é estruturado de modo que todas as ferramentas catalogadas possam ser usadas. Os componentes significativos da organização do computador são ALU, CPU, memória e organização da memória.</p5> 
+<br>
+<p5>A matéria tem como principal objetivo capacitar o acadêmico a compreender e a descrever o funcionamento de computadores digitais, incluindo hardware e software básico, seus componentes (processador, memória, barramentos, interfaces, dispositivos de entrada e saída, microcódigo, montador, ligador, carregador) e os conceitos e tecnologias associados (sistemas de numeração, representação de dados, aritmética computacional, conjunto de instruções).</p5>
+<br>
+<h2>Diferenças entre Arquitetura de Computadores e Organização de Computadores</h2>
+<br> 
+<p5>1 - Arquitetura de Computadores: Arquitetura da computação é um projeto para projeto e implementação de um sistema de computador. Ele fornece os detalhes funcionais e o comportamento de um sistema de computador e vem antes da organização do computador. A arquitetura do computador lida com o termo: o que fazer.</p5>
+<br>
+<p5>2 - Organização de computadores: Organização do computador é como as partes operacionais de um sistema de computador são interligadas. Ele implementa a arquitetura de computador fornecida. A organização de computadores lida com o termo: como fazer.</p5>
+<br>
+<p5>Veja a seguir algumas das diferenças importantes entre AC e OC.</p5>
+<br>
+<img src="AOC14.PNG" alt="imagem" width="600" height="300">
+<h2>Sistemas de Numeração - Bases e Conversões</h2>
+<br>
+<p5>Notação posicional: a posição dos algarismos ou dígitos determina o valor Algarismos componentes de um número assumem valores diferentes dependendo da posição relativa no número. O valor total é a soma dos valores relativos.</p5>
+<p5>Base: quantidade de algarismos disponíveis em um dado sistema de numeração.
+<br>
+ base 10
+<br>
+ base 2
+<br>
+ base 8
+<br>
+ base 16</p5>
+<br>
+<h3>Base 2 e Potência de 2</h3>
+<br>
+<p5>Quanto menor a base, mais dígitos são necessários e pior a visualização, por isso utilizam-se potências de 2, Base 8 (octal) ou 16 (hexadecimal).
+<br>
+(10111)^2=1x2^4+0x2^3+1x2^2+1x2^1+1x2^0=23
+<br>
+(312)^5=3x5^2+1x5^1+2x5^0=82
+<br>
+(130)^8=1x8^2+3x8^2+0x8^0=88</p5>
+<br>
+<br>
+<p5>Número máximo de algarismos diferentes em 1 base é igual ao valor da base:
+<br>
+ base 10: 10 dígitos - 0 a 9
+<br>
+ base 2: 2 dígitos - 0 a 1
+<br>
+ base 16 16 dígitos- 0 a 9, A, B, C, D, E, F</p5>
+<br>
+<img src="AOC2.PNG" alt="imagem" width="250" height="500">
+<br>
+<h3>Conversão entre as Bases 2 e 8</h3>
+<br>
+<p5>Cada dígito octal corresponde a combinação de 3 dígitos binários 8=2^3</p5>
+<br>
+<p5>N=d8x 2^8+d7x 2^7+...+d2x 2^3+d1x 2^1+d0x 2^0</p5>
+<br>
+<br>
+<p5>Para converter da base 2 para 8, divide-se o número em grupos de 3 bits da direita para a esquerda e acha-se o dígito octal equivalente</p5>  
+<br>
+<br>
+<p5>Para converter da base 8 para 2, substitui-se cada dígito na base 8 pelo grupo de 3 bits equivalente na base 2</p5>
+<br>
+<h3>Conversão entre as Bases 2 e 16</h3>
+<br>
+<p5>Cada dígito hexadecimal corresponde a combinação de 4 dígitos binários 16=2^4</p5>
+<br>
+<p5>N=d8x 2^8+d7x 2^7+...+d2x 2^3+d1x 2^1+d0x 2^0</p5>
+<br>
+<br>
+<p5>Para converter da base 2 para 16 agrupam-se os dígitos em grupos de 4 e encontra-se dígito correspondente na base 16.</p5>  
+<br>
+<br>
+<p5>Para converter da base 16 para base 2, encontra-se o grupo de 4 dígitos na base 2 correspondente ao dígito na base 16. </p5>
+<br>
+<br>
+<p5>Para converter da base 8 para 16, converte para base 2 e depois para 16.</p5>
+<br>
+<h3>Conversão de Números Fracionários</h3>
+<br>
+<img src="AOC3.PNG" alt="imagem" width="500" height="500">
+<br>
+<h3>Aritmética não Decimal</h3>
+<br>
+<p5>Números inteiros, sem limite de tamanho e positivos (sem sinal).
+<br>
+ Sem limite de tamanho não se preocupa com overflow.</p5>
+<br>
+<h3>Adição na Base Binária</h3>
+<br>
+<p5>0 + 0 = 0, 0 + 1 = 1, 1 + 0 = 1, 1 + 1 = 0, vai um.</p5>
+<br>
+<img src="AOC4.PNG" alt="imagem" width="300" height="250">
+<br>
+<h3>Adição na Base 8</h3>
+<br>
+<img src="AOC5.PNG" alt="imagem" width="250" height="250">
+<br>
+<h3>Adição na Base 16</h3>
+<br>
+<img src="AOC6.PNG" alt="imagem" width="250" height="250">
+<h3>Subtração na Base 2</h3>
+<img src="AOC7.PNG" alt="imagem" width="250" height="250">
+<br>
+<p5>Não consegue representar números negativos!</p5>
+<br>
+<h3>Subtração na Base 8</h3>
+<img src="AOC8.PNG" alt="imagem" width="250" height="250">
+<br>
+<h3>Subtração na Base 16</h3>
+<img src="AOC9.PNG" alt="imagem" width="250" height="250">
+<br>
+<h2>Representação de Dados - Números com Sinal</h2>
+<p5>Com n dígitos binários, podemos representar 2n valores diferentes de inteiros sem sinal.</p5>
+<br>
+<br>
+<p5>Representações para números com sinal:
+<br>
+ sinal e magnitude
+<br>
+ complemento a um
+<br>
+ complemento a dois</p5>
+<br>
+<h3>Sinal e Magnitude</h3>
+<br>
+<p5>O bit mais à esquerda é o sinal e os restantes fornecem a magnitude do
+número.
+<br>
+--------------------
+<br>
+| Sinal | Magnitude |
+<br>
+--------------------
+<br>
+0 para números positivos e 1 para números negativos</p5>
+<p5>Exemplo:
+<br>
+00000101 = +5
+<br>
+10000101 = -5
+<br>
+Faixa de valores com n dígitos: -(2^(n-1)-1) a + (2^(n-1)-1).
+<br>
+Para n=4 teremos a faixa -7 a +7</p5>
+<br>
+<br>
+<p5>Algoritmo de soma:
+<br>
+1. Verificam-se os sinais dos números e efetua-se uma comparação entre eles
+<br>
+2. Se ambos possuem o mesmo sinal, somam-se as magnitudes e o sinal do resultado é o mesmo das parcelas
+<br>
+3. Se os números possuem sinais diferentes:
+<br>
+ identifica-se a maior das magnitudes e registra-se o seu sinal
+<br>
+ subtrai-se a magnitude menor da maior
+<br> 
+ o sinal do resultado é igual ao sinal de maior magnitude</p5>
+<br>
+<br>
+<p5>Algoritmo de subtração:
+<br>
+1. Troca-se o sinal do subtraendo
+<br>
+2. Executa algoritmo de soma</p5>
+<br>
+<h3>Representação Complemento a 2</h3>
+<br>
+<p5>Como representar números negativos no sistema decimal com 3 algarismos? Divide o sistema em 2, utiliza uma metade para positivos e a outra para negativos.</p5>
+<br>
+<h3>Complemento a 10</h3>
+<br>
+<p5>Positivos são so próprios números: 0 a +499, representação: 0 - 499
+<br>
+Negativos são o complemento a 10 do número positivo
+<br>
+Complemento a base= Bn-N onde n é o número de algarismos que temos para representar um número.
+<br>
+-500=10^3-500=1000-500=500
+-499 = 1000 -499= 501
+-1 = 1000 -1 = 999</p5>
+<br>
+<br>
+<p5>Para subtrair:
+<br>
+A - B = A + (-B)
+<br>
+-3 -5 = -3 + (-5)
+<br>
+-3 = 997 + 995 = 1992, retirando o 1 à esquerda temos o resultado 992 que é negativo e para sabermos o valor fazemos 1000 - x = 992, x = 8, logo resultado = -8.</p5>
+<br>
+<h3>Complemento a 2</h3>
+<br>
+<p5>Se número positivo e existem n dígitos para representar o número, dn-1=0. Se o número é negativo a representação é 2^n -N onde N é a representação positiva.</p5>
+<br>
+<br>
+<p5>Número 0 só tem 1 representação: 000 positivo e 2^3 - 000 = 1000, representação negativa= 000</p5>
+<br>
+<br>
+<p5>Representação de números positivos: 1 a (2^(n-1)-1)
+<br>
+Representação de números negativos: -1 a (-2^n-1)
+<br>
+Faixa de valores:-2^(n-1) a (2^(n-1)-1)</p5>
+<h3>Como Representar um Número em Complemento a 2?</h3>
+<img src="AOC10.PNG" alt="imagem" width="500" height="300">
+<br>
+<h3>Soma e Subtração em Complemento a 2</h3>
+<br>
+<p5>Soma: N1 + N2
+<br>
+Subtração: N1-N2 = N1+(-N2) e joga fora o vai um</p5>
+<br> 
+<img src="AOC11.PNG" alt="imagem" width="400" height="300">
+<h3>Overflow</h3>
+<br>
+<p5>Overflow ocorre quando o número não pode ser representado com o número de bits disponível. Só ocorrerá overflow quando estivermos somando dois números de mesmo
+sinal. Se temos 3 bits para representar números em complemento a 2, podemos representar os seguintes inteiros com sinal:
+<br>
+011 +3
+<br>
+010 +2
+<br>
+001 +1
+<br>
+000 0
+<br>
+111 -1
+<br>
+110 -2
+<br>
+101 -3
+<br>
+100 -4</p5>
+<br>
+<p5>Menor número negativo = -2^(3-1)=-4
+<br>
+Maior número positivo = 2^(3-1)-1=+3
+<br> 
+Soma: N1+N2</p5>
+<br>
+<img src="AOC12.PNG" alt="imagem" width="300" height="500">
+<br>
+<h3>Representação em Ponto Flutuante</h3>
+<br>
+<p5>Na representação em ponto fixo, a vírgula não é representada, mas assumida em uma posição. Nas máquinas atuais, utiliza-se a vírgula na posição mais a direita para representar inteiros. Números fracionários utilizam a representação em ponto flutuante.</p5>
+<img src="AOC13.PNG" alt="imagem" width="500" height="300">
+<br>
+<h2>Resumo</h2>
+<p5>O computador deve ser capaz de mover dados entre ele e o mundo exterior. O ambiente operacional do computador consiste em dispositivos que servem como fontes ou destinos de dados. Quando os dados são recebidos ou entregues a um dispositivo que está conectado diretamente ao computador, o processo é conhecido como entrada-saída: I/O e o dispositivo é conhecido como periférico. Quando os dados são movidos por distâncias maiores, de ou para um dispositivo remoto, o processo é conhecido como comunicação de dados.</p5>
+
+</body>
+
+</html>
